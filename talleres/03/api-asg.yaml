@@ -79,7 +79,7 @@ Resources:
     Type: AWS::AutoScaling::AutoScalingGroup
     Properties: 
       AvailabilityZones: !GetAZs
-      DesiredCapacity: 1 # maquinas que se inician 
+      DesiredCapacity: 1 # instancias ec2 que se inician 
       LaunchConfigurationName: !Ref LaunchConfiguration
       LoadBalancerNames: 
         - !Ref LoadBalancer
