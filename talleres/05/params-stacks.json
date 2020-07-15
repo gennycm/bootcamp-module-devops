@@ -1,6 +1,6 @@
 [{
         "ParameterKey": "VpcId",
-        "ParameterValue": ""
+        "ParameterValue": "vpc-e02f349a"
     },
     {
         "ParameterKey": "InstanceType",
@@ -8,6 +8,6 @@
     },
     {
         "ParameterKey": "KeyName",
-        "ParameterValue": "mythical-mysfits"
+        "ParameterValue": "mysfits"
     }
 ]

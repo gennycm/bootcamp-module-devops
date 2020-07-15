@@ -22,8 +22,8 @@ Resources:
   InstanceSG:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupName: InstanceStack01
-      GroupDescription: Stack01
+      GroupName: InstanceStack02
+      GroupDescription: Stack02
       VpcId: !Ref VpcId
       SecurityGroupIngress:
         - CidrIp: 0.0.0.0/0
@@ -33,7 +33,7 @@ Resources:
   TargetGroup:
     Type: AWS::ElasticLoadBalancingV2::TargetGroup
     Properties:
-      Name: Stack01
+      Name: Stack02
       HealthCheckIntervalSeconds: 30
       HealthCheckPath: /
       HealthCheckPort: 8000
@@ -76,22 +76,22 @@ Resources:
     Properties:
       AvailabilityZones: !GetAZs
       LaunchConfigurationName: !Ref LaunchConfiguration
-      DesiredCapacity: 0
-      MaxSize: 0
-      MinSize: 0
+      DesiredCapacity: 1
+      MaxSize: 2
+      MinSize: 1
       TargetGroupARNs:
         - !Ref TargetGroup
       Tags:
         - Key: Name
-          Value: MythicalMysfitsStack01
+          Value: MythicalMysfitsStack02
           PropagateAtLaunch: True
 
 Outputs:
   SecurityGroup:
     Value: !Ref InstanceSG
     Export:
-      Name: Stack01SG
+      Name: Stack02SG
   TargetGroup:
     Value: !Ref TargetGroup
     Export:
-      Name: Stack01TargetGroup
+      Name: Stack02TargetGroup
