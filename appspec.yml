@@ -1,0 +1,4 @@
+aws deploy push \
+  --application-name MythicalMysfitsEC2 \
+  --s3-location s3://deploy-base-s3bucket-2wta3co1ofvm/Mythical-1.zip \
+  --ignore-hidden-files
