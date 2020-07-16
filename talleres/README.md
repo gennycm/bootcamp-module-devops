@@ -13,3 +13,5 @@ A lo largo del curso, evolucionaremos la forma de desplegar la aplicación ocupa
 5. [Taller 5](./05/README.md): Blue/Green deployments con CloudFormation y Auto Scaling Groups
 
 6. [Taller 6](./06/README.md): Introducción a CodeBuild
+
+7. [Taller 7](./07/README.md): Introducción a CodePipeline
